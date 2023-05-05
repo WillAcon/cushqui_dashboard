@@ -48,8 +48,8 @@
 				</span>
 			</div>
 			<div class="flex items-center justify-end ml-5 p-1 relative w-full sm:mr-0 sm:right-auto">
-				<span class="block pr-5">
-					<button on:click={() => open_ew.update(value => !value)}>Abrir/Cerrar Sidebar</button>
+				<span class="block pr-5 hidden lg:block">
+					<button on:click={() => open_ew.update(value => !value)}>Evento cookie</button>
 				</span>
 				<span class="block pr-5">
 					<DarkMode size="26"/>

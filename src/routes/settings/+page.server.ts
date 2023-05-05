@@ -1,10 +1,9 @@
-import { fail, redirect } from '@sveltejs/kit';
+import { fail, redirect, error } from '@sveltejs/kit';
 import * as api from '$lib/api';
 
 // import { createNanoEvents } from 'nanoevents'
 
-export const prerender = false;
-
+/** @type {import('./$types').PageLoad} */
 export function load({ locals }) {
     // console.log("locals", locals);
 	if (!locals.user) throw redirect(302, '/login');
