@@ -34,7 +34,7 @@
         <h2 class="text-2xl font-bold bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
             Sign in to platform 
         </h2>
-        <form class="mt-8 space-y-6" use:enhance method="POST">
+        <form class="mt-8 space-y-6" action="?/auth" use:enhance method="POST">
             <div class="mb-4">
             <Label class="mb-2">
               <span>Usuario</span> 

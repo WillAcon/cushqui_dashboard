@@ -8,7 +8,8 @@ export async function load({ locals }) {
 
 /** @type {import('./$types').Actions} */
 export const actions = {
-	default: async ({ cookies, request }) => {
+
+	auth: async ({ cookies, request }) => {
 		const data = await request.formData();
 		const netData = Object.fromEntries(data.entries());
 		console.log(netData);
