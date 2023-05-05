@@ -3,6 +3,7 @@ import * as api from '$lib/api';
 
 // import { createNanoEvents } from 'nanoevents'
 
+export const prerender = false;
 
 export function load({ locals }) {
     // console.log("locals", locals);
