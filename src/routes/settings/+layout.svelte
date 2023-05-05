@@ -1,0 +1,3 @@
+Layout settings
+
+<slot></slot>

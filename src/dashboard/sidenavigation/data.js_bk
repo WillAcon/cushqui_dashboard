@@ -1,0 +1,54 @@
+import HomeIcon from './icons/HomeIcon.svelte';
+import StatusIcon from './icons/StatusIcon.svelte';
+import CreditsIcon from './icons/CreditsIcon.svelte';
+import ArchivesIcon from './icons/ArchivesIcon.svelte';
+import SettingsIcon from './icons/SettingsIcon.svelte';
+import DocumentationIcon from './icons/DocumentationIcon.svelte';
+
+const data = [
+	{
+		title: 'Home',
+		icon: HomeIcon,
+		link: '/admin'
+	},
+	{
+		title: 'Tickets',
+		icon: StatusIcon,
+		link: '/admin/ticket',
+		id:"ticket",
+		subitems: [
+			{
+				title: 'Lista',
+				icon: StatusIcon,
+				link: '/admin/ticket',
+			},
+			{
+				title: 'Crear',
+				icon: StatusIcon,
+				link: '/admin/ticket/create',
+			},
+		]
+	},
+	{
+		title: 'Archives',
+		icon: ArchivesIcon,
+		link: '/admin/sorteo'
+	},
+	{
+		title: 'Credits',
+		icon: CreditsIcon,
+		link: '/admin/credits'
+	},
+	{
+		title: 'Settings',
+		icon: SettingsIcon,
+		link: '/settings'
+	},
+	{
+		title: 'Documentation',
+		icon: DocumentationIcon,
+		link: '/admin/documentation'
+	}
+];
+
+export default data;
