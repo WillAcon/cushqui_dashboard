@@ -12,7 +12,6 @@ export function load({ locals }) {
 /** @type {import('./$types').Actions} */
 export const actions = {
 	logout: async ({ cookies, locals }) => {
-		
 		// const emitter = createNanoEvents();
 		// console.log("logged emitter", emitter);
 		// emitter.emit('logoutEmit', 'Hola desde el servidor');
@@ -22,12 +21,13 @@ export const actions = {
 	},
 
 	save: async ({ cookies, locals, request }) => {
-        // console.log('save', locals)s
+        console.log('save', locals)
 		if (!locals.user) throw error(401);
         const user_id = locals.user.userData.id;
 		const data = await request.formData();
 		const newData = Object.fromEntries(data.entries());
 		const body = await api.patch(`api/v1/user/${user_id}`,newData, locals.user.access_token);
+		console.log("body",body);
 		if (body.errors) return fail(400, body.errors);
 		locals.user.userData = body;
 		const value = btoa(JSON.stringify(locals.user));

@@ -39,7 +39,7 @@ const data = [
 	{
 		title: 'Settings',
 		icon: SettingsIcon,
-		link: '/settings'
+		link: '/admin/settings'
 	},
 	// {
 	// 	title: 'Documentation',

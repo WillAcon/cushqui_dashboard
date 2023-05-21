@@ -32,19 +32,29 @@ let socket;
 
 if (typeof process === 'undefined') {
   // Esto se ejecuta en el navegador
-    socket = new WebSocket('ws://127.0.0.1:8000/ws');
+    // socket = new WebSocket(`ws://127.0.0.1:8000/user/${id}`);
+    var usuario = Math.floor(Math.random() * (100 - 1) + 1);
+    var id_usuario = usuario.toString();
+    var id_usuario = 122;
+    console.log(id_usuario);
+
+    socket = new WebSocket(`ws://localhost:8000/user/${id_usuario}`);
+    var token = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+    // socket = new WebSocket(`ws://localhost:8000/user/${id_usuario}`, ["Authorization", `Bearer ${token}`]);
     // Connection opened
     socket.addEventListener('open', function (event) {
-        console.log("It's open");
+        console.log("It's open xxxxxx",event);
+        socket.send(token); // Envía e
     });
 
     socket.addEventListener('message', function (event) {
         let data = JSON.parse(event.data);
-        console.log("data",data);
+        console.log("data nn",data);
+
         if (data.channel === "cola1") {
             let cola1Div = document.getElementById("cola1");
             cola1Div.innerHTML += `<p>${data.message}</p>`;
-        } else if (data.channel === "cola2") {
+        } else if (data.channel == id_usuario) {
             let cola2Div = document.getElementById("cola2");
 
             let images = [

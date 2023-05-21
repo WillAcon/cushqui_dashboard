@@ -10,12 +10,5 @@
 </script>
 
 
-{#if (data && data.isLogin) && $page.route.id != '/'}
-  <LayoutAdmin>
-    <slot />
-  </LayoutAdmin>
-{:else}
-  <LayoutPublic>
-      <slot />
-  </LayoutPublic>
-{/if}
+
+<slot />

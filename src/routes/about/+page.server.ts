@@ -1,4 +1,4 @@
-import { fail, redirect } from '@sveltejs/kit';
+import { fail, redirect, error } from '@sveltejs/kit';
 import * as api from '$lib/api';
 
 /** @type {import('./$types').PageServerLoad} */
@@ -11,12 +11,11 @@ export async function load({ parent }) {
 
 /** @type {import('./$types').Actions} */
 export const actions = {
-	default: async ({ cookies, request }) => {
+	save: async ({ cookies, request }) => {
 		const data = await request.formData();
 		const netData = Object.fromEntries(data.entries());
 		console.log("netData",netData);
-
-		const body = await api.post('cola1', netData);
+		const body = await api.post('push_message/122', netData);
         console.log("body",body);
 	
 	}

@@ -7,6 +7,7 @@
     let inputMessage = '';
 
     onMount(() => {
+     
       WebSocket.subscribe(msg => {
         message = msg;
       });
@@ -24,14 +25,19 @@
 
   <div>
     <p>Message: {message}</p>
-    <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" use:enhance method="POST">
+    <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" 
+    use:enhance
+    method="POST" 
+    action="?/save">
         <input type="text" bind:value={inputMessage} name="message">
+        <input type="hidden" value="williams" name="user">
+        <input type="hidden" value="message" name="action">
 
         <button type="submit"  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" >
             Registrar
           </button>
     </form>
-    
+
   </div>
 
   <div>
