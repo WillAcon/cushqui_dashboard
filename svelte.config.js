@@ -1,10 +1,10 @@
-import node from '@sveltejs/adapter-node';
+// import node from '@sveltejs/adapter-node';
 import { vitePreprocess } from '@sveltejs/kit/vite';
-
+import adapter from '@sveltejs/adapter-vercel';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
   kit: {
-    adapter: node()
+    adapter: adapter(),
   },
   preprocess: vitePreprocess()
 };
