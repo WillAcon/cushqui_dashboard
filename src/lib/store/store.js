@@ -38,7 +38,7 @@ if (typeof process === 'undefined') {
     var id_usuario = 122;
     console.log(id_usuario);
 
-    socket = new WebSocket(`ws://cushqui-backend.onrender.com/user/${id_usuario}`);
+    socket = new WebSocket(`wss://cushqui-backend.onrender.com/user/${id_usuario}`);
     var token = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
     // socket = new WebSocket(`ws://localhost:8000/user/${id_usuario}`, ["Authorization", `Bearer ${token}`]);
     // Connection opened
