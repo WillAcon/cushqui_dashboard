@@ -38,7 +38,7 @@ if (typeof process === 'undefined') {
     var id_usuario = 122;
     console.log(id_usuario);
 
-    socket = new WebSocket(`wss://cushqui-backend.onrender.com/user/${id_usuario}`);
+    socket = new WebSocket(`ws://localhost:8000/user/${id_usuario}`);
     
     // socket = new WebSocket(`ws://localhost:8000/user/${id_usuario}`, ["Authorization", `Bearer ${token}`]);
     // Connection opened
@@ -53,7 +53,7 @@ if (typeof process === 'undefined') {
         if (data.channel === "cola1") {
             let cola1Div = document.getElementById("cola1");
             cola1Div.innerHTML += `<p>${data.message}</p>`;
-        } else if (data.channel == id_usuario) {
+        } else if (data.channel == "chatroom") {
             let cola2Div = document.getElementById("cola2");
 
             let images = [
@@ -71,6 +71,11 @@ if (typeof process === 'undefined') {
             cola2Div.innerHTML += htmlTemp;
         }
     });
+
+    // socket.addEventListener('onclose', function (event) {
+    //     console.log("Closing websocket connection");
+    // });
+
 } else {
   // Esto se ejecuta en Node.js
   console.log("Estás ejecutando este código en Node.js");

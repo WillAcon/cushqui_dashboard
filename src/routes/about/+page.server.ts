@@ -15,7 +15,7 @@ export const actions = {
 		const data = await request.formData();
 		const netData = Object.fromEntries(data.entries());
 		console.log("netData",netData);
-		const body = await api.post('push_message/122', netData);
+		const body = await api.post('push_message/chatroom', netData);
         console.log("body",body);
 	
 	}
