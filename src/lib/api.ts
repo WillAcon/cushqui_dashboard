@@ -1,6 +1,7 @@
 import { error } from '@sveltejs/kit';
 
-const base = 'http://localhost:8000';
+// const base = 'http://localhost:8000';
+const base = 'https://cushqui-backend.onrender.com';
 
 async function send({ method, path, data, token }) {
 	const opts = { method, headers: {} };
