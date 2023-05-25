@@ -1,4 +1,5 @@
 import { writable } from 'svelte/store';
+import { PUBLIC_WS_BASE } from '$env/static/public';
 
 // // Función para conectarse al websocket
 // function connectWebSocket(queue_name) {
@@ -38,8 +39,8 @@ if (typeof process === 'undefined') {
     var id_usuario = 122;
     console.log(id_usuario);
 
-    // socket = new WebSocket(`ws://localhost:8000/user/${id_usuario}`);
-    socket = new WebSocket(`wss://cushqui-backend.onrender.com/user/${id_usuario}`);
+    socket = new WebSocket(`${PUBLIC_WS_BASE}/user/${id_usuario}`);
+    // socket = new WebSocket(`wss://cushqui-backend.onrender.com/user/${id_usuario}`);
 
     
     // socket = new WebSocket(`ws://localhost:8000/user/${id_usuario}`, ["Authorization", `Bearer ${token}`]);

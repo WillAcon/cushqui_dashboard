@@ -1,8 +1,10 @@
 import { error } from '@sveltejs/kit';
+import { PUBLIC_API_BASE } from '$env/static/public';
 
-// const base = 'http://localhost:8000';
-const base = 'https://cushqui-backend.onrender.com';
+const base = PUBLIC_API_BASE; //'http://localhost:8000';
+// const base = 'https://cushqui-backend.onrender.com';
 
+// console.log("secreeee", SECRET_API_KEY)
 async function send({ method, path, data, token }) {
 	const opts = { method, headers: {} };
 
