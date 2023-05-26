@@ -1,5 +1,5 @@
-<script>
-	import { open } from '../provider/store.js';
+<script lang="ts">
+	import { open } from '../provider/store';
 	import SidenavItems from './Items.svelte';
 	import SidenavHeader from './Header.svelte';
 	import { clickOutside } from '../provider/click-outside';

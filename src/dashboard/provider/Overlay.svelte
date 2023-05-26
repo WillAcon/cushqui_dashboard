@@ -1,5 +1,5 @@
 <script>
-	import { open } from './store.js';
+	import { open } from './store';
 
 	const closeSidenav = () => {
 		open.update(value => false);

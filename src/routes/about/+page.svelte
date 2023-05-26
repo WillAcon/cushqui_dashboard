@@ -1,6 +1,6 @@
-<script>
+<script lang="ts">
     import { onMount } from 'svelte';
-    import WebSocket from '$lib/store/store.js';
+    import WebSocket from '$lib/store/store';
 	import { enhance } from '$app/forms';
 
     let message = '';
