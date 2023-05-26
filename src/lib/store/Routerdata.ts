@@ -1,8 +1,8 @@
-import HomeIcon from "../icons/HomeIcon.svelte";
-import SettingsIcon from "../icons/SettingsIcon.svelte";
-import StatusIcon from "../icons/StatusIcon.svelte";
-import DocumentationIcon from "../icons/DocumentationIcon.svelte";
-import CreditsIcon from "../icons/CreditsIcon.svelte";
+import HomeIcon from "$lib/icons/HomeIcon.svelte";
+import SettingsIcon from "$lib/icons/SettingsIcon.svelte";
+import StatusIcon from "$lib/icons/StatusIcon.svelte";
+import DocumentationIcon from "$lib/icons/DocumentationIcon.svelte";
+import CreditsIcon from "$lib/icons/CreditsIcon.svelte";
 
 const data = [
 	{

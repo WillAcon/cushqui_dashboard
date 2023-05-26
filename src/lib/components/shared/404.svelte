@@ -1,7 +1,6 @@
-<script>
+<script lang="ts">
     import { Button } from 'flowbite-svelte';
 	import ArrowRight from "carbon-icons-svelte/lib/ArrowRight.svelte";
-
 </script>
 
 <div class="flex flex-col justify-center items-center px-6 mx-auto h-screen xl:px-0 dark:bg-gray-900">

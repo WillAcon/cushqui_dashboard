@@ -48,9 +48,9 @@
                   <Input id="show-password" type={show ? 'text' : 'password'} placeholder="Your password here" name="password" size="lg">
                     <button slot="left" type="button" on:click={() => (show = !show)} class="pointer-events-auto">
                       {#if show}
-                        <View size="24" />
+                        <View size='24' />
                       {:else}
-                        <ViewOff size="24" />
+                        <ViewOff size='24' />
                       {/if}
                     </button>
                   </Input>

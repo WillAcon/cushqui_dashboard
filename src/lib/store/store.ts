@@ -1,26 +1,9 @@
 import { writable } from 'svelte/store';
 import { PUBLIC_WS_BASE } from '$env/static/public';
 
-// // Función para conectarse al websocket
-// function connectWebSocket(queue_name) {
-//     let url = `ws://127.0.0.1:8000/ws`;
-//     let ws = new WebSocket(url);
-
-//     // Se muestra el mensaje recibido en el div correspondiente
-//     ws.onmessage = function(event) {
-//         let data = JSON.parse(event.data);
-// console.log("mensajes recibido", data)
-//         if (data.channel === "cola1") {
-//             let cola1Div = document.getElementById("cola1");
-//             cola1Div.innerHTML += `<p>${data.message}</p>`;
-//         } else if (data.channel === "cola2") {
-//             let cola2Div = document.getElementById("cola2");
-//             cola2Div.innerHTML += `<p>${data.message}</p>`;
-//         }
-//     };
-// }
 
 /** @type {import('./$types').PageServerLoad} */
+// @ts-ignore
 export async function prueba({ locals }) {
 	console.log("page server1",locals);
 }
@@ -29,14 +12,15 @@ export async function prueba({ locals }) {
 // connectWebSocket("cola1");
 
 const messageStore = writable('');
-let socket;
+let socket :any;
 
+// @ts-ignore
 if (typeof process === 'undefined') {
   // Esto se ejecuta en el navegador
     // socket = new WebSocket(`ws://127.0.0.1:8000/user/${id}`);
-    var usuario = Math.floor(Math.random() * (100 - 1) + 1);
-    var id_usuario = usuario.toString();
-    var id_usuario = 122;
+    //let usuario = Math.floor(Math.random() * (100 - 1) + 1);
+    //let id_usuario = usuario.toString();
+    let id_usuario: number = 122;
     console.log(id_usuario);
 
     socket = new WebSocket(`${PUBLIC_WS_BASE}/user/${id_usuario}`);
@@ -44,20 +28,21 @@ if (typeof process === 'undefined') {
 
     
     // socket = new WebSocket(`ws://localhost:8000/user/${id_usuario}`, ["Authorization", `Bearer ${token}`]);
-    // Connection opened
+   // @ts-ignore
     socket.addEventListener('open', function (event) {
         console.log("It's open xxxxxx",event);
     });
 
+    // @ts-ignore
     socket.addEventListener('message', function (event) {
         let data = JSON.parse(event.data);
         console.log("data nn",data);
 
         if (data.channel === "cola1") {
-            let cola1Div = document.getElementById("cola1");
+            let cola1Div : any = document.getElementById("cola1");
             cola1Div.innerHTML += `<p>${data.message}</p>`;
         } else if (data.channel == "chatroom") {
-            let cola2Div = document.getElementById("cola2");
+            let cola2Div :any= document.getElementById("cola2");
 
             let images = [
                 "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=4&w=256&h=256&q=80",
@@ -84,6 +69,7 @@ if (typeof process === 'undefined') {
   console.log("Estás ejecutando este código en Node.js");
 }
 
+//@ts-ignore
 const sendMessage = (message) => {
     console.log("Estás ejecutando este",message);
     // socket.send(message);

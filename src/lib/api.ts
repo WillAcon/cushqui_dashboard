@@ -4,9 +4,13 @@ import { PUBLIC_API_BASE } from '$env/static/public';
 const base = PUBLIC_API_BASE; //'http://localhost:8000';
 // const base = 'https://cushqui-backend.onrender.com';
 
-// console.log("secreeee", SECRET_API_KEY)
-async function send({ method, path, data, token }) {
-	const opts = { method, headers: {} };
+async function send({ method, path, data, token }: { method: string; path: string; data?: any; token?: string }) {
+	// const opts = { method, headers: {} };
+
+	const opts: { method: string; headers: { 'Content-Type'?: string, 'Authorization'?: string }; body?: string } = {
+		method,
+		headers: {}
+	  };
 
 	if (data) {
 		opts.headers['Content-Type'] = 'application/json';
@@ -26,30 +30,34 @@ async function send({ method, path, data, token }) {
 	throw error(res.status);
 }
 
-export function get(path, token) {
+export function get(path:string, token:string) {
 	console.log("GETTaaaa", path)
-	return send({ method: 'GET', path, token });
+	return send({ method: 'GET', path , token });
 }
 
-export function del(path, token) {
+export function del(path:string, token:string) {
 	return send({ method: 'DELETE', path, token });
 }
 
-export function post(path, data, token) {
+export function post(path:string, data:any, token?:string) {
 	return send({ method: 'POST', path, data, token });
 }
 
-export function put(path, data, token) {
+export function put(path:string, data:any, token:string) {
 	return send({ method: 'PUT', path, data, token });
 }
-export function patch(path, data, token) {
+export function patch(path:string, data:any, token:string) {
 	return send({ method: 'PATCH', path, data, token });
 }
-export function login(path, data, token) {
-	return sendLogin({ method: 'POST', path, data, token });
+export function login(path:string, data:any) {
+	return sendLogin({ method: 'POST', path, data });
 }
-async function sendLogin({ method, path, data }) {
-	const opts = { method, headers: {} };
+
+async function sendLogin({ method, path, data }:{ method: string; path: string; data?: any }) {
+	const opts: { method: string; headers: { 'Content-Type'?: string, 'Authorization'?: string }; body?: string } = {
+		method,
+		headers: {}
+	  };
 
 	if (data) {
 		opts.headers['Content-Type'] = 'application/x-www-form-urlencoded';
@@ -63,5 +71,4 @@ async function sendLogin({ method, path, data }) {
 	}
 	let text = await res.text();
 	return text ? JSON.parse(text) : {};
-	// throw error(res.status);
 }

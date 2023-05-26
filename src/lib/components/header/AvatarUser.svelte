@@ -1,7 +1,7 @@
-<script>
+<script lang="ts">
     import {Avatar, Dropdown, DropdownHeader, DropdownItem, DropdownDivider} from 'flowbite-svelte';
 
-    export let user;
+    export let user : any;
 </script>
 
     <Avatar id="user-drop" src="/images/1.jpg" dot={{color:'green'}} />

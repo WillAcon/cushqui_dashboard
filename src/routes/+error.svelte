@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	import  NotFound from '../lib/components/shared/404.svelte';
+	import  NotFound from '$lib/components/shared/404.svelte';
 
 	console.log("algo salio",$page);
 </script>

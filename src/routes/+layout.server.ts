@@ -1,6 +1,6 @@
 console.log("Starting TS file")
 /** @type {import('./$types').LayoutServerLoad} */
-export function load({ locals }) {
+export function load({ locals }:{ locals: any}) {
 	return {
 		user: locals.user && locals.user.userData && {
 			username: locals.user.userData.email,
@@ -10,6 +10,6 @@ export function load({ locals }) {
 			// image: locals.user.user.image,
 			// bio: locals.user.bio
 		},
-		isLogin: locals.user && locals.user.userData ? true : false
+		isLogin: !!(locals.user && locals.user.userData)
 	};
 }

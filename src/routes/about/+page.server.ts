@@ -2,6 +2,7 @@ import { fail, redirect, error } from '@sveltejs/kit';
 import * as api from '$lib/api';
 
 /** @type {import('./$types').PageServerLoad} */
+// @ts-ignore
 export async function load({ parent }) {
 	// console.log("parent",parent)
 	// const { user } = await parent();
@@ -11,12 +12,12 @@ export async function load({ parent }) {
 
 /** @type {import('./$types').Actions} */
 export const actions = {
+	// @ts-ignore
 	save: async ({ cookies, request }) => {
 		const data = await request.formData();
 		const netData = Object.fromEntries(data.entries());
 		console.log("netData",netData);
-		const body = await api.post('push_message/chatroom', netData);
+		const body = await api.post('push_message/chatroom', netData, '');
         console.log("body",body);
-	
 	}
 };

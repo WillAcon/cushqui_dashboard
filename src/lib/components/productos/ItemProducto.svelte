@@ -1,5 +1,5 @@
-<script>
-	export let producto;
+<script lang="ts">
+	export let producto :any;
 </script>
 
 <div class="w-full md:w-1/2 lg:w-1/4 p-4">

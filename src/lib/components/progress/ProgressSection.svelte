@@ -1,6 +1,6 @@
-<script>
+<script lang="ts">
 	import ProgressBar from './ProgressBar.svelte';
-	import { todos } from '../../store/TodoStore';
+	import { todos } from '$lib/store/TodoStore';
 	export let completePercentage = 0;
 	export let progressPercentage = 0;
 	$: totalCount = $todos.length;

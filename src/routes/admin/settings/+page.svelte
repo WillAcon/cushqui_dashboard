@@ -4,9 +4,9 @@
     import { Badge, Button } from 'flowbite-svelte';
 
 	/** @type {import('./$types').PageData} */
-	export let data;
+	export let data :any;
 	/** @type {import('./$types').ActionData} */
-	export let form;
+	export let form : any;
 
 	import { createEventDispatcher } from 'svelte';
 	const dispatch = createEventDispatcher()

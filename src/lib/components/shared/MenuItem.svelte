@@ -1,7 +1,7 @@
-<script>
-    export let item;
-    export let open;
-    export let page;
+<script lang="ts">
+    export let item :any;
+    export let open :any;
+    export let page :any;
 	import Icon from "$lib/icons/Icon.svelte";
 
 

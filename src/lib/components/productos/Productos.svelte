@@ -1,6 +1,6 @@
-<script>
+<script lang="ts">
 	import ItemProducto from './ItemProducto.svelte';
-    export let productos;
+  export let productos : any;
 </script>
 
 <div class="container px-4 mx-auto">

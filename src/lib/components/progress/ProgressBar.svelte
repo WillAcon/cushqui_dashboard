@@ -1,6 +1,6 @@
-<script>
-	export let title;
-	export let percentage;
+<script lang="ts">
+	export let title :string;
+	export let percentage :any;
 	$: completeClass = title === 'Completed' ? 'bg-green-four' : 'bg-leaf-one';
 </script>
 
