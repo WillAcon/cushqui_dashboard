@@ -1,13 +1,13 @@
 <script lang="ts">
-	import ProgressBar from './ProgressBar.svelte';
-	import { todos } from '$lib/store/TodoStore';
-	export let completePercentage = 0;
-	export let progressPercentage = 0;
-	$: totalCount = $todos.length;
-	$: completeCount = $todos.filter((todo) => todo.complete).length;
-	$: progressCount = $todos.filter((todo) => !todo.complete).length;
-	$: completePercentage = Math.round((completeCount / totalCount) * 100) || 0;
-	$: progressPercentage = Math.round((progressCount / totalCount) * 100) || 0;
+	import ProgressBar from './ProgressBar.svelte'
+	import { todos } from '$lib/store/TodoStore'
+	export let completePercentage = 0
+	export let progressPercentage = 0
+	$: totalCount = $todos.length
+	$: completeCount = $todos.filter((todo) => todo.complete).length
+	$: progressCount = $todos.filter((todo) => !todo.complete).length
+	$: completePercentage = Math.round((completeCount / totalCount) * 100) || 0
+	$: progressPercentage = Math.round((progressCount / totalCount) * 100) || 0
 </script>
 
 <section class="mt-10">

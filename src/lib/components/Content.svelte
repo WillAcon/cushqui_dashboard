@@ -1,12 +1,13 @@
 <script>
-	export let title;
-	import { DarkMode } from 'flowbite-svelte';
-
+	export let title
+	import { DarkMode } from 'flowbite-svelte'
 </script>
 
 <div class="flex flex-wrap">
 	<div class="w-full lg:w-8/12 c-800 dark:bg-gray-200 py-6 px-6 rounded-3xl">
-		<div class="flex justify-between text-white dark:text-black items-center mb-8">
+		<div
+			class="flex justify-between text-white dark:text-black items-center mb-8"
+		>
 			<p class="text-2xl font-bold">{title}</p>
 			<p class="">December, 12</p>
 			<DarkMode />
@@ -27,7 +28,10 @@
 				</div>
 			</div>
 			<div class="flex items-center mt-4 md:mt-0">
-				<button class="text-white dark:text-black bg-transparent" title="List View">
+				<button
+					class="text-white dark:text-black bg-transparent"
+					title="List View"
+				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="24"
@@ -47,7 +51,10 @@
 						<line x1="3" y1="18" x2="3.01" y2="18" />
 					</svg>
 				</button>
-				<button class="text-white dark:text-black bg-gray-700 dark:bg-gray-200 p-2 ml-2" title="Grid View">
+				<button
+					class="text-white dark:text-black bg-gray-700 dark:bg-gray-200 p-2 ml-2"
+					title="Grid View"
+				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="20"
@@ -80,7 +87,9 @@
 						</div>
 						<div>
 							<p class="text-sm font-bold m-0">Progress</p>
-							<div class="w-full h-1 rounded-md overflow-hidden bg-white my-2 mx-0">
+							<div
+								class="w-full h-1 rounded-md overflow-hidden bg-white my-2 mx-0"
+							>
 								<span class="block h-1 rounded-md bg-yellow-700 w-6/12" />
 							</div>
 							<p class="text-right m-0 text-sm font-bold">60%</p>
@@ -137,7 +146,9 @@
 						</div>
 						<div>
 							<p class="text-sm font-bold m-0">Progress</p>
-							<div class="w-full h-1 rounded-md overflow-hidden bg-white my-2 mx-0">
+							<div
+								class="w-full h-1 rounded-md overflow-hidden bg-white my-2 mx-0"
+							>
 								<span class="block h-1 rounded-md bg-indigo-700 w-5/12" />
 							</div>
 							<p class="text-right m-0 text-sm font-bold">50%</p>
@@ -194,7 +205,9 @@
 						</div>
 						<div>
 							<p class="text-sm font-bold m-0">Progress</p>
-							<div class="w-full h-1 rounded-md overflow-hidden bg-white my-2 mx-0">
+							<div
+								class="w-full h-1 rounded-md overflow-hidden bg-white my-2 mx-0"
+							>
 								<span class="block h-1 rounded-md bg-green-700 w-7/12" />
 							</div>
 							<p class="text-right m-0 text-sm font-bold">70%</p>
@@ -230,7 +243,9 @@
 									</svg>
 								</button>
 							</div>
-							<div class="text-sm rounded-lg flex flex-shrink-0 py-2 px-4 font-bold text-green-700">
+							<div
+								class="text-sm rounded-lg flex flex-shrink-0 py-2 px-4 font-bold text-green-700"
+							>
 								2 Days Left
 							</div>
 						</div>
@@ -249,7 +264,9 @@
 						</div>
 						<div>
 							<p class="text-sm font-bold m-0">Progress</p>
-							<div class="w-full h-1 rounded-md overflow-hidden bg-white my-2 mx-0">
+							<div
+								class="w-full h-1 rounded-md overflow-hidden bg-white my-2 mx-0"
+							>
 								<span class="block h-1 rounded-md bg-blue-700 w-7/12" />
 							</div>
 							<p class="text-right m-0 text-sm font-bold">70%</p>
@@ -285,7 +302,9 @@
 									</svg>
 								</button>
 							</div>
-							<div class="text-sm rounded-lg flex flex-shrink-0 py-2 px-4 font-bold text-blue-700">
+							<div
+								class="text-sm rounded-lg flex flex-shrink-0 py-2 px-4 font-bold text-blue-700"
+							>
 								2 Days Left
 							</div>
 						</div>
@@ -304,7 +323,9 @@
 						</div>
 						<div>
 							<p class="text-sm font-bold m-0">Progress</p>
-							<div class="w-full h-1 rounded-md overflow-hidden bg-white my-2 mx-0">
+							<div
+								class="w-full h-1 rounded-md overflow-hidden bg-white my-2 mx-0"
+							>
 								<span class="block h-1 rounded-md bg-red-700 w-7/12" />
 							</div>
 							<p class="text-right m-0 text-sm font-bold">70%</p>
@@ -340,7 +361,9 @@
 									</svg>
 								</button>
 							</div>
-							<div class="text-sm rounded-lg flex flex-shrink-0 py-2 px-4 font-bold text-red-700">
+							<div
+								class="text-sm rounded-lg flex flex-shrink-0 py-2 px-4 font-bold text-red-700"
+							>
 								2 Days Left
 							</div>
 						</div>
@@ -359,7 +382,9 @@
 						</div>
 						<div>
 							<p class="text-sm font-bold m-0">Progress</p>
-							<div class="w-full h-1 rounded-md overflow-hidden bg-white my-2 mx-0">
+							<div
+								class="w-full h-1 rounded-md overflow-hidden bg-white my-2 mx-0"
+							>
 								<span class="block h-1 rounded-md bg-purple-700 w-7/12" />
 							</div>
 							<p class="text-right m-0 text-sm font-bold">70%</p>
@@ -422,8 +447,12 @@
 					/>
 					<div class="pl-4 w-full">
 						<div class="flex items-center justify-between w-full">
-							<div class="text-white dark:text-black font-medium">Stephanie</div>
-							<div class="flex justify-center items-center cursor-pointer h-7 w-7">
+							<div class="text-white dark:text-black font-medium">
+								Stephanie
+							</div>
+							<div
+								class="flex justify-center items-center cursor-pointer h-7 w-7"
+							>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="20"
@@ -443,8 +472,8 @@
 							</div>
 						</div>
 						<p class="my-2 text-sm text-gray-400">
-							I got your first assignment. It was quite good. 🥳 We can continue with the next
-							assignment.
+							I got your first assignment. It was quite good. 🥳 We can continue
+							with the next assignment.
 						</p>
 						<p class="text-right text-gray-400 text-sm">Dec, 12</p>
 					</div>
@@ -460,7 +489,9 @@
 					<div class="pl-4 w-full">
 						<div class="flex items-center justify-between w-full">
 							<div class="text-white dark:text-black font-medium">Mark</div>
-							<div class="flex justify-center items-center cursor-pointer h-7 w-7">
+							<div
+								class="flex justify-center items-center cursor-pointer h-7 w-7"
+							>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="20"
@@ -480,7 +511,8 @@
 							</div>
 						</div>
 						<p class="my-2 text-sm text-gray-400">
-							Hey, can tell me about progress of project? I'm waiting for your response.
+							Hey, can tell me about progress of project? I'm waiting for your
+							response.
 						</p>
 						<p class="text-right text-gray-400 text-sm">Dec, 12</p>
 					</div>
@@ -496,7 +528,9 @@
 					<div class="pl-4 w-full">
 						<div class="flex items-center justify-between w-full">
 							<div class="text-white dark:text-black font-medium">David</div>
-							<div class="flex justify-center items-center cursor-pointer h-7 w-7">
+							<div
+								class="flex justify-center items-center cursor-pointer h-7 w-7"
+							>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="20"
@@ -516,7 +550,8 @@
 							</div>
 						</div>
 						<p class="my-2 text-sm text-gray-400">
-							Hey, can tell me about progress of project? I'm waiting for your response.
+							Hey, can tell me about progress of project? I'm waiting for your
+							response.
 						</p>
 						<p class="text-right text-gray-400 text-sm">Dec, 12</p>
 					</div>
@@ -532,7 +567,9 @@
 					<div class="pl-4 w-full">
 						<div class="flex items-center justify-between w-full">
 							<div class="text-white dark:text-black font-medium">Mark</div>
-							<div class="flex justify-center items-center cursor-pointer h-7 w-7">
+							<div
+								class="flex justify-center items-center cursor-pointer h-7 w-7"
+							>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="20"

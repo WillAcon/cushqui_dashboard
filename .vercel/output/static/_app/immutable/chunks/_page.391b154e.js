@@ -1,0 +1,1 @@
+const r=!1,t=!1;function o({params:e}){return console.log("render page"),{post:{title:`Title for ${e.slug} goes here`,content:`Content for ${e.slug} goes here`}}}const s=Object.freeze(Object.defineProperty({__proto__:null,load:o,prerender:!1,ssr:!1},Symbol.toStringTag,{value:"Module"}));export{s as _,o as l,r as p,t as s};

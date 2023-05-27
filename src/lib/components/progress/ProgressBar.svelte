@@ -1,7 +1,7 @@
 <script lang="ts">
-	export let title :string;
-	export let percentage :any;
-	$: completeClass = title === 'Completed' ? 'bg-green-four' : 'bg-leaf-one';
+	export let title: string
+	export let percentage: any
+	$: completeClass = title === 'Completed' ? 'bg-green-four' : 'bg-leaf-one'
 </script>
 
 <div>

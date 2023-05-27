@@ -1,10 +1,12 @@
 <script>
-	import { deleteTodo, toggleComplete, editTodo } from '../../store/TodoStore';
-	export let todo;
-	$: completeClass = todo.complete ? 'bg-green-three' : 'bg-leaf-one';
+	import { deleteTodo, toggleComplete, editTodo } from '../../store/TodoStore'
+	export let todo
+	$: completeClass = todo.complete ? 'bg-green-three' : 'bg-leaf-one'
 </script>
 
-<div class="flex items-center justify-between rounded-md border-2 border-gray-one px-5 py-4">
+<div
+	class="flex items-center justify-between rounded-md border-2 border-gray-one px-5 py-4"
+>
 	<div class="flex w-full max-w-lg items-center justify-start">
 		<label for={`${todo.id}-checkbox`} class="sr-only">Complete todo</label>
 		<input

@@ -1,8 +1,8 @@
 <script lang="ts">
-	export let message:string;
-	export let direction = "right";
+	export let message: string
+	export let direction = 'right'
 </script>
 
-<p style="text-align: {direction}" >
+<p style="text-align: {direction}">
 	{message}
 </p>

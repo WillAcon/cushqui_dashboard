@@ -1,5 +1,5 @@
 <script>
-	import { addTodo } from '../../store/TodoStore';
+	import { addTodo } from '../../store/TodoStore'
 </script>
 
 <section class="flex justify-between">

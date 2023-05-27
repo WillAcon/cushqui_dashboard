@@ -1,3 +1,3 @@
 Layout settings
 
-<slot></slot>
+<slot />

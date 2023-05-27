@@ -1,6 +1,6 @@
-import { fail, redirect } from '@sveltejs/kit';
+import { fail, redirect } from '@sveltejs/kit'
 
 /** @type {import('./$types').LayoutServerLoad} */
 export function load({ locals }) {
-    if (!locals.user) throw redirect(307, '/login');
+	if (!locals.user) throw redirect(307, '/login')
 }

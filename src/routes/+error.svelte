@@ -1,8 +1,8 @@
 <script>
-	import { page } from '$app/stores';
-	import  NotFound from '$lib/components/shared/404.svelte';
+	import { page } from '$app/stores'
+	import NotFound from '$lib/components/shared/404.svelte'
 
-	console.log("algo salio",$page);
+	console.log('algo salio xxx', $page)
 </script>
 
 <svelte:head>
@@ -11,7 +11,7 @@
 
 <div>
 	{#if $page.status === 404}
-		<NotFound/>
+		<NotFound />
 	{:else}
 		<h1>Algo salió mal</h1>
 	{/if}

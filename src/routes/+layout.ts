@@ -1,2 +1,2 @@
-export const ssr = false;
-console.log("aaaa")
+export const ssr = false
+console.log('aaaa')
